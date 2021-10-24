@@ -27,10 +27,11 @@ cp file1.txt file2.txt
 mv file2.txt ../empty
 
 
-Ejercicio 4:
+Ejercicio 4 (incompleto):
 
 
 #! /usr/bin/bash
 
 curl -I --http2 -s https://linuxize.com/ > texto.txt
+wc -l texto.txt
 grep -c'443' texto.txt

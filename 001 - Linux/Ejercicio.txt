@@ -1,0 +1,36 @@
+Ejercicio 1:
+
+mkdir -p foo/{dummy,empty}
+cd foo/dummy
+touch file2.txt | echo 'Me encanta la bash!!' > file1.txt
+
+Ejercicio 2:
+
+cp file1.txt file2.txt
+mv file2.txt ../empty
+
+Ejercicio 3:
+
+#! /usr/bin/bash
+
+TEXTO=$1
+
+if [ -z "$TEXTO" ]; then
+  unset TEXTO
+  TEXTO="Que me gusta la bash!!!!"
+fi
+
+mkdir -p foo/{dummy,empty}
+cd foo/dummy
+touch file2.txt | echo $TEXTO > file1.txt
+cp file1.txt file2.txt
+mv file2.txt ../empty
+
+
+Ejercicio 4:
+
+
+#! /usr/bin/bash
+
+curl -I --http2 -s https://linuxize.com/ > texto.txt
+grep -c'443' texto.txt
